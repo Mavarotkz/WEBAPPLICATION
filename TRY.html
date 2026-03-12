@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>MY App for Cloud 2026</title>
+  
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
+  
+  <!-- External Stylesheet (if any) -->
+  <link rel="stylesheet" href="style.css" />
+
+  <style>
+    body {
+      font-family: 'Inter', sans-serif;
+      background: linear-gradient(to right, #6a11cb, #2575fc);
+      color: #fff;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      min-height: 100vh;
+      text-align: center;
+      animation: fadeIn 1.5s ease;
+    }
+
+    h1 {
+      font-size: 2.5rem;
+      margin-bottom: 10px;
+      animation: slideDown 1s ease-out;
+    }
+
+    p {
+      font-size: 1.1rem;
+      margin-bottom: 20px;
+      max-width: 600px;
+      animation: fadeIn 2s ease;
+    }
+
+    label,
+    select {
+      font-size: 1rem;
+      margin-top: 20px;
+      margin-bottom: 10px;
+    }
+
+    select {
+      padding: 10px;
+      border-radius: 8px;
+      border: none;
+      outline: none;
+      font-size: 1rem;
+      transition: transform 0.3s;
+    }
+
+    select:hover {
+      transform: scale(1.05);
+    }
+
+    #output {
+      margin-top: 15px;
+      font-weight: 600;
+      font-size: 1.2rem;
+      animation: fadeIn 1s ease-in-out;
+    }
+
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+      }
+
+      to {
+        opacity: 1;
+      }
+    }
+
+    @keyframes slideDown {
+      from {
+        transform: translateY(-30px);
+        opacity: 0;
+      }
+
+      to {
+        transform: translateY(0);
+        opacity: 1;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <h1>🚀 WELCOME TO JIMMY CLOUD ADMINISTRATION CLASS 2026</h1>
+  <p>YOUR FACILITATOR IS MY JIMMY MALOMO.</p>
+
+  <label for="dropdown">Choose an option:</label><br>
+  <select id="dropdown" onchange="handleSelection()">
+    <option value="">-- Select --</option>
+    <option value="option1">Option 1</option>
+    <option value="option2">Option 2</option>
+    <option value="option3">Option 3</option>
+  </select>
+
+  <p id="output"></p>
+
+  <script>
+    function handleSelection() {
+      const value = document.getElementById("dropdown").value;
+      const output = document.getElementById("output");
+
+      if (value) {
+        output.textContent = `🎉 You selected: ${value}`;
+      } else {
+        output.textContent = '';
+      }
+    }
+  </script>
+
+</body>
+
+</html>
